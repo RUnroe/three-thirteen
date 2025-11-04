@@ -21,12 +21,13 @@ const Game = () => {
         setRound({...round, deck: {cards: tempDeck}, discardDeck: {cards: discardDeck}});
         setPlayer1({...player1, deck: {cards: playerDeck}});
 
-        console.log(player1, round)
+       
     }, []);
+     console.log(player1, round)
     return (
         <DndProvider backend={HTML5Backend}>
         <main id="game">
-            <PlayerHand player={player1} />
+            <PlayerHand player={player1} setPlayer={setPlayer1}/>
         </main>
         </DndProvider>
     );
