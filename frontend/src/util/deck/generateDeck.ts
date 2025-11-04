@@ -1,8 +1,8 @@
-import type Card from "../../types/Card";
+import type Card from "../../types/ICard";
 
 
 export default (numOfDecks: number) => {
-    let suits = ['♣', '♦', '♥', '♠'];
+    let suits = ['c', 'd', 'h', 's'];
     let ranks = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
 
     let cards:Card[] = [];
@@ -14,7 +14,8 @@ export default (numOfDecks: number) => {
                     rank: rankIndex + 1,
                     displayRank: `${rank}`,
                     suit,
-                    points: rankIndex + 1
+                    points: rankIndex + 1,
+                    id: `${suit}-${rankIndex}-${i}`
                 });
             }
         });

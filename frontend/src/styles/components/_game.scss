@@ -1,0 +1,29 @@
+.card {
+    border: 2px solid black;
+    width: 80px;
+    height: 120px;
+    transition: transform 0.2s ease;
+    cursor: grab;
+
+    .suit {
+        font-size: 1.2rem;
+    }
+
+    &.red {
+        border-color: #cc1616;
+        color: #a30d0d;
+    }
+}
+
+.card-group {
+    padding: 0.25rem;
+    border: 2px solid cyan;
+    margin: 0.25rem;
+}
+
+
+.player-deck {
+    display: flex;
+    gap: 0.25rem;
+
+}

@@ -1,9 +1,9 @@
-import type Deck from "./Deck";
+import type IDeck from "./IDeck";
 
-export default interface Player {
+export default interface IPlayer {
     //Round specific
     score: number,
-    deck: Deck,
+    deck: IDeck,
     isTurn: boolean, //I don't love this name
 
     //Game specific
