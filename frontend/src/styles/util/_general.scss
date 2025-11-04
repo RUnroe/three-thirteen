@@ -1,0 +1,230 @@
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-body);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+html, body {
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-bg-primary);
+  position: relative;
+
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+}
+
+
+/**************************
+        Typography
+**************************/
+p, div, button, li {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-title);
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+
+  &.large {
+    font-size: 3.815rem;
+  }
+}
+
+h1 {
+  font-size: 2.441rem;
+  font-weight: 500;
+}
+h2 {font-size: 1.953rem;}
+h3 {font-size: 1.563rem;}
+h4 {font-size: 1.25rem;}
+
+.sub-title {
+  font-weight: 600;
+  color: var(--color-text-subtitle);
+}
+
+p, li:not(.url) {
+  color: var(--color-text-body);
+  // line-height: 1.15;
+  line-height: 2.8;
+  &:first-letter{
+    text-transform: capitalize
+  }
+}
+
+.sub-text {
+  color: var(--color-text-subtext);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.center {
+  text-align: center;
+}
+
+a, a:visited {
+  color: var(--color-text-link);
+}
+
+svg {
+  transition: fill 0.1s ease;
+}
+
+/**************************
+        Button
+**************************/
+
+button, .button, .btn {
+  padding: 0.35rem 1.15rem;
+  border-radius: var(--border-radius-button);
+  border: var(--border);
+  background-color: var(--color-bg-primary);
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-text-body);
+  width: fit-content;
+  height: fit-content;
+  display: block;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color 0.1s ease, background-color 0.1s ease, border-color 0.1s ease;
+
+  &:hover {
+      background-color: var(--color-primary-light);
+    }
+
+  &.outline, &.secondary {
+    border: 2px solid var(--color-primary-medium);
+    color: var(--color-primary-dark);
+    font-weight: 500;
+  }
+
+  &.primary {
+    background-color: var(--color-primary-medium);
+    color: var(--color-bg-primary);
+    font-weight: 500;
+
+    &:hover {
+      background-color: var(--color-btn-primary-bg-hover);
+    }
+  }
+
+  &.delete, &.close {
+    font-weight: 500;
+
+    &:hover {
+      color: var(--color-danger);
+      background-color: var(--color-bg-primary);
+      border-color: var(--color-danger);
+      svg {
+        fill: var(--color-danger);
+      }
+    }
+  }
+
+  &.icon {
+    padding: 0.15rem 1.15rem;
+    vertical-align: middle;
+    
+    svg {
+      fill: var(--color-icon);
+    }
+  }
+
+}
+
+
+
+
+
+.button-group {
+  margin: 0.5rem 0;
+  border-radius: var(--border-radius-button);
+  border: var(--border);
+  width: fit-content;
+  display: flex;
+
+  button {
+    border:none;
+    border-right: 1px solid #ddd;
+    border-radius: 0;
+
+    &.first {
+      border-top-left-radius: var(--border-radius-button);
+      border-bottom-left-radius: var(--border-radius-button);
+    }
+    
+    &.last {
+      border:none;
+      border-top-right-radius: var(--border-radius-button);
+      border-bottom-right-radius: var(--border-radius-button);
+    }
+
+    &.selected {
+      background-color: var(--color-primary-medium);
+      color: var(--color-bg-primary);
+      font-weight: 500;
+
+      &:hover {
+        background-color: var(--color-btn-primary-bg-hover);
+      }
+    }
+  }
+}
+
+
+/**************************
+        Input
+**************************/
+
+input {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+  border: var(--border);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius-button);
+  outline-color: var(--color-primary-medium);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-group {
+  margin-bottom: 0.75rem;
+  .label-row {
+    margin-bottom: 0.35rem;
+  }
+}
+
+
+/**************************
+        Common
+**************************/
+
+
+ul, ol {
+  margin-left: 1rem;
+  li {
+    margin-bottom: 0.5rem;
+
+    &::marker {
+      color: var(--color-primary-medium);
+    }
+  }
+}
+
+

@@ -1,0 +1,113 @@
+
+/**************************
+        Border Radius
+**************************/
+
+$border-radius-button: 6px;
+$border-radius-card: 12px;
+$border-radius-small-card: 6px;
+
+@media all and (max-width: 676px) {
+   
+}
+
+
+/**************************
+        Colors
+**************************/
+
+$dark-500: #101011;
+$dark-450: #161616;
+$dark-400: #1B1B1B;
+$dark-100: #4b494b;
+
+$dark-gradient: linear-gradient(to bottom right, $dark-400, $dark-450);
+
+
+$pink-700: #ff4d6d;
+$pink-500: #fb6f92;
+$pink-400: #ff8fab;
+$pink-200: #ffc2d1;
+$pink-100: #ffe5ec;
+
+$light-800: #716e71;
+$light-700: #a0a0a0;
+$light-400: #CCC;
+$light-200: #F0F0F0;
+$light-100: #FFFFFF;
+
+$red-500: #FF6D6D;
+
+$green-500: #1FDFBD;
+
+
+:root {
+    --border-radius-button: #{$border-radius-button};
+    --border-radius-card: #{$border-radius-card};
+    
+    --border: 1px solid #{$light-400};
+
+    --color-danger: #{$red-500};
+    --color-success: #{$green-500};
+
+
+    --color-bg-primary: #{$light-100};
+    --color-bg-secondary: #{$light-100};
+    --color-bg-card: #{$light-100};
+
+    --color-box-shadow: #{rgba($dark-100, 0.4)};
+
+    --color-primary-dark: #{$pink-700};
+    --color-primary-medium: #{$pink-400};
+    --color-primary-light: #{$pink-100};
+
+    --color-text-title: #{$dark-500};
+    --color-text-subtitle: #{$pink-700};
+    --color-text-body: #{$dark-100};
+    --color-text-subtext: #{$light-700};
+    --color-text-disabled: #{$light-400};
+    --color-text-link: #{$pink-700};
+
+    --color-icon: #{$light-800};
+
+    --color-btn-primary-background: #{$pink-700};
+    --color-btn-primary-bg-hover: #{$pink-500};
+    --color-btn-primary-text: #{$light-100};
+    --color-btn-outline: #{$pink-700};
+    --color-btn-disabled: #{$dark-100};
+}
+
+// @media (prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
+//     :root {
+//         --border: 1px solid #{$dark-100};
+
+//         --color-bg-primary: #{$dark-500};
+//         --color-bg-secondary: #{$dark-400};
+//         --color-bg-card: #{$dark-gradient};
+
+//         --color-box-shadow: #{rgba($dark-500, 0.4)};
+
+//         --color-primary-dark: #{$purple-700};
+//         --color-primary-medium: #{$purple-500};
+//         --color-primary-light: #{$purple-400};
+
+//         --color-text-title: #{$light-100};
+//         --color-text-subtitle: #{$purple-400};
+//         --color-text-body: #{$light-200};
+//         --color-text-subtext: #{$light-700};
+//         --color-text-disabled: #{$light-400};
+//         --color-text-link: #{$purple-400};
+
+//         --color-btn-primary-bg: #{$purple-700};
+//         --color-btn-primary-bg-hover: #{$purple-500};
+//         --color-btn-primary-text: #{$light-100};
+//         --color-btn-outline: #{$purple-700};
+//         --color-btn-disabled: #{$dark-100};
+//     }
+// }
+
+@media all and (max-width: 450px) {
+    :root {
+        --border-radius-card: #{$border-radius-small-card};
+    }
+}
